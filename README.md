@@ -83,9 +83,54 @@ Next Steps
 	•	Translate analysis logic into SQL
 	•	Apply predictive modeling for churn or lifetime value
 
+	
+
+## SQL Analysis
+
+### Objective
+The objective of the SQL analysis was to explore revenue and customer behavior using relational queries. SQL was used to validate findings from the Python-based EDA and to demonstrate the ability to work with structured data using database-style workflows.
+
+### Database Setup
+A local SQLite database was created and populated using cleaned transactional data. The database was built directly from CSV files generated during the EDA phase. This approach mirrors real-world scenarios where analysts query production databases rather than raw files.
+
+### Key Analyses Performed
+
+#### Revenue Analysis
+- Calculated total revenue by product to identify top-performing items
+- Aggregated revenue by country to understand geographic distribution
+- Computed average revenue per invoice
+
+#### Customer Analysis
+- Calculated total revenue per customer
+- Counted number of invoices per customer
+- Identified repeat vs one-time customers
+- Ranked customers by total revenue contribution
+
+### Example Queries
+The following types of SQL operations were used:
+- GROUP BY for aggregations
+- ORDER BY for ranking results
+- COUNT, SUM, and AVG for metrics
+- Subqueries for customer-level summaries
+
+### Insights
+- A small subset of customers contributed a disproportionately large share of total revenue
+- Repeat customers generated significantly more revenue than one-time buyers
+- SQL results closely matched insights from pandas-based analysis, validating data consistency across tools
+
+### Why SQL Was Used
+SQL was included to demonstrate:
+- Ability to work with relational data models
+- Comfort querying databases rather than flat files
+- Understanding of production-style analytics workflows
+
+This SQL analysis complements the Python EDA and predictive modeling by providing an alternative, database-centric view of the same business problem
 
 
-	## Predictive Analysis
+
+
+## Predictive Analysis
+
 
 ### Objective
 The objective of this analysis was to identify high-value customers based on historical purchase behavior. A high-value customer was defined as a customer whose total revenue falls within the top 25% of all customers.
